@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        #Mahak{
+            text-align: center;
+            padding: 25px;
+            width: 500px;
+            height:50% ;
+            background-color: LightSkyBlue;
+            border-radius: 25px;
+            margin-left: 420px;
+        }
+    </style>
+</head>
+<body>
+    <i>
+    <div class="cantainer">
+      <h1 class="text-center mt-1 text-success mb-2"><i>Tip</i> <span style="color: indigo	;"><i>calculator</i></span></h1>
+        <div id="Mahak" style="margin-top: 25px; border: 5px solid black;">
+
+            <label>Bill Amount:</label>&emsp;&emsp;&emsp;&emsp;
+                   <input type="number" id="t1"><br><br>
+
+              <label>Percentage Tip:</label>&emsp;&emsp;&ensp;
+                       <input type="number" id="t2"><br><br>
+
+                 <label>Tip Amount:</label>&emsp;&emsp;&emsp;&emsp;
+                            <input type="number" disabled id="t3"><br><br> 
+
+                    <label class="">Total:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <input type="number" disabled id="total"><br><br>  
+
+            <button class="badge badge-pill p-2 btn btn-dark active" value="add" onclick="fiv()">calculate</button>
+            </div> 
+        </div>     
+    <script>
+        function fiv()
+        {
+            var a,t,ta,total;
+            a=+document.getElementById("t1").value;
+            t=+document.getElementById("t2").value;
+            ta=+document.getElementById("t3").value;
+            ta=(a*t)/100;
+            total=a+ta;
+            document.getElementById("t3").value=+ta;
+            document.getElementById("total").value=+total;
+        }
+    </script>
+    </i>
+</body>
+</html>
+
+
+
